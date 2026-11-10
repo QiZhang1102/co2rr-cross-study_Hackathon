@@ -18,7 +18,7 @@ npm run dev
 # http://127.0.0.1:4173; if occupied: PORT=4187 npm run dev
 ```
 
-`npm run build` creates the static `dist/` folder. `SERVE_DIST=1 npm run dev` serves that exact output. Use an HTTP server, not a `file://` URL, for ES modules.
+`npm run build` creates the static `dist/` folder with content-addressed JS/CSS paths and a build ID, so published revisions do not reuse stale script URLs. `SERVE_DIST=1 npm run dev` serves that exact output. Use an HTTP server, not a `file://` URL, for ES modules.
 
 ## Try the workflow
 

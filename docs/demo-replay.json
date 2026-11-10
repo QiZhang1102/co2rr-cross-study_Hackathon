@@ -1,0 +1,290 @@
+{
+  "dataset": "li_rhe",
+  "seed": 42,
+  "budget": 6,
+  "note": "One executed paired replay, not a general performance benchmark",
+  "policies": [
+    {
+      "policy": "random",
+      "startIds": [
+        "L03",
+        "L08",
+        "L02"
+      ],
+      "history": [
+        {
+          "id": "L03",
+          "x": [
+            58,
+            3
+          ],
+          "y": 33.2,
+          "trace": "Fig. 3a; −0.91 V vs RHE",
+          "step": 1,
+          "policy": "start"
+        },
+        {
+          "id": "L08",
+          "x": [
+            45,
+            1
+          ],
+          "y": 40.8,
+          "trace": "Fig. 3c; −0.91 V vs RHE",
+          "step": 2,
+          "policy": "start"
+        },
+        {
+          "id": "L02",
+          "x": [
+            58,
+            2
+          ],
+          "y": 44.8,
+          "trace": "Fig. 3a; −0.91 V vs RHE",
+          "step": 3,
+          "policy": "start"
+        },
+        {
+          "id": "L01",
+          "x": [
+            58,
+            1
+          ],
+          "y": 52.5,
+          "trace": "Fig. 3a / 3c; −0.91 V vs RHE",
+          "step": 4,
+          "policy": "random"
+        },
+        {
+          "id": "L04",
+          "x": [
+            58,
+            5
+          ],
+          "y": 12.7,
+          "trace": "Fig. 3a; −0.91 V vs RHE",
+          "step": 5,
+          "policy": "random"
+        },
+        {
+          "id": "L07",
+          "x": [
+            30,
+            1
+          ],
+          "y": 22.3,
+          "trace": "Fig. 3c; −0.91 V vs RHE",
+          "step": 6,
+          "policy": "random"
+        }
+      ],
+      "curve": [
+        {
+          "budget": 3,
+          "best": 44.8
+        },
+        {
+          "budget": 4,
+          "best": 52.5
+        },
+        {
+          "budget": 5,
+          "best": 52.5
+        },
+        {
+          "budget": 6,
+          "best": 52.5
+        }
+      ]
+    },
+    {
+      "policy": "mean",
+      "startIds": [
+        "L03",
+        "L08",
+        "L02"
+      ],
+      "history": [
+        {
+          "id": "L03",
+          "x": [
+            58,
+            3
+          ],
+          "y": 33.2,
+          "trace": "Fig. 3a; −0.91 V vs RHE",
+          "step": 1,
+          "policy": "start"
+        },
+        {
+          "id": "L08",
+          "x": [
+            45,
+            1
+          ],
+          "y": 40.8,
+          "trace": "Fig. 3c; −0.91 V vs RHE",
+          "step": 2,
+          "policy": "start"
+        },
+        {
+          "id": "L02",
+          "x": [
+            58,
+            2
+          ],
+          "y": 44.8,
+          "trace": "Fig. 3a; −0.91 V vs RHE",
+          "step": 3,
+          "policy": "start"
+        },
+        {
+          "id": "L01",
+          "x": [
+            58,
+            1
+          ],
+          "y": 52.5,
+          "trace": "Fig. 3a / 3c; −0.91 V vs RHE",
+          "step": 4,
+          "policy": "mean"
+        },
+        {
+          "id": "L06",
+          "x": [
+            15,
+            1
+          ],
+          "y": 15.9,
+          "trace": "Fig. 3c; −0.91 V vs RHE",
+          "step": 5,
+          "policy": "mean"
+        },
+        {
+          "id": "L05",
+          "x": [
+            58,
+            10
+          ],
+          "y": 8.3,
+          "trace": "Fig. 3a; −0.91 V vs RHE",
+          "step": 6,
+          "policy": "mean"
+        }
+      ],
+      "curve": [
+        {
+          "budget": 3,
+          "best": 44.8
+        },
+        {
+          "budget": 4,
+          "best": 52.5
+        },
+        {
+          "budget": 5,
+          "best": 52.5
+        },
+        {
+          "budget": 6,
+          "best": 52.5
+        }
+      ]
+    },
+    {
+      "policy": "ei",
+      "startIds": [
+        "L03",
+        "L08",
+        "L02"
+      ],
+      "history": [
+        {
+          "id": "L03",
+          "x": [
+            58,
+            3
+          ],
+          "y": 33.2,
+          "trace": "Fig. 3a; −0.91 V vs RHE",
+          "step": 1,
+          "policy": "start"
+        },
+        {
+          "id": "L08",
+          "x": [
+            45,
+            1
+          ],
+          "y": 40.8,
+          "trace": "Fig. 3c; −0.91 V vs RHE",
+          "step": 2,
+          "policy": "start"
+        },
+        {
+          "id": "L02",
+          "x": [
+            58,
+            2
+          ],
+          "y": 44.8,
+          "trace": "Fig. 3a; −0.91 V vs RHE",
+          "step": 3,
+          "policy": "start"
+        },
+        {
+          "id": "L06",
+          "x": [
+            15,
+            1
+          ],
+          "y": 15.9,
+          "trace": "Fig. 3c; −0.91 V vs RHE",
+          "step": 4,
+          "policy": "ei"
+        },
+        {
+          "id": "L05",
+          "x": [
+            58,
+            10
+          ],
+          "y": 8.3,
+          "trace": "Fig. 3a; −0.91 V vs RHE",
+          "step": 5,
+          "policy": "ei"
+        },
+        {
+          "id": "L07",
+          "x": [
+            30,
+            1
+          ],
+          "y": 22.3,
+          "trace": "Fig. 3c; −0.91 V vs RHE",
+          "step": 6,
+          "policy": "ei"
+        }
+      ],
+      "curve": [
+        {
+          "budget": 3,
+          "best": 44.8
+        },
+        {
+          "budget": 4,
+          "best": 44.8
+        },
+        {
+          "budget": 5,
+          "best": 44.8
+        },
+        {
+          "budget": 6,
+          "best": 44.8
+        }
+      ]
+    }
+  ]
+}

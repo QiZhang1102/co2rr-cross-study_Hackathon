@@ -22,7 +22,36 @@ Browser extension upload API lacked local-file URL access; the native system pic
 
 ## Production verification
 
-Pending deployment and independent public-browser verification. Replace this section only after successful deployment and actual online checks.
+**Verified public URL:** https://next-experiment-co2rr.zq20021102mia.chatgpt.site
+
+Sites version 3 succeeded, deployment `appgdep_6af24c13b1f88191bb87a1d341a13a87`, source commit `72743bc49746e6f0c46d5a172bca8c39426571bd`. Public access was explicitly enabled. A cookie-free curl request returned HTTP 200 and the application, and a fresh browser tab required no account or API key. Runtime build ID: `5451698ce3dc`.
+
+All eight deployed JS/CSS runtime files were fetched anonymously and byte-compared with local source: exact matches. Per-file SHA-256 values are in `production-integrity.json`. Native browser use and the final saved files verified:
+
+| Online check | Actual outcome |
+| --- | --- |
+| One-click default replay | Three starting observations, L06 recommended; historical reveal updates to four observations |
+| Manual selection and budget | L01 manually revealed as 52.5; six-condition budget stops further reveals |
+| Paired comparison | Random 52.5, GP mean 52.5, GP-EI 44.8 for seed 42 / budget 6; same L03, L08, L02 start |
+| Final-build replay | Complete six-condition algorithm path and comparison repeated after build-ID confirmation |
+| Real CSV file input | Both example CSVs selected through the native file chooser on final build; 3 measured and 5 candidate rows |
+| Mapping error | Duplicate mapped condition rejected with readable error, corrected mapping fits successfully |
+| Exclusion and refit | C3 excluded, C2 selected, synthetic result 65 added, best updates to 65 and four known rows |
+| Invalid result | NaN rejected; observation count stays three |
+| Final export consistency | C4 predicted mean displayed 47.6195; actual downloaded CSV retains full precision, report rounds consistently; known CSV includes C2=65 |
+| Mobile 390×844 | Page width 390 with no overall overflow; homepage, form, chart and result update inspected |
+| Mobile minimization | Simulated sample switched to minimize; new synthetic result 10 changes best from 35 to 10; CSV download succeeds |
+| Exhausted candidates | Exclude all unmeasured rows → no eligible candidates; re-enable C3 → recommendation returns |
+| Feedback | Structured feedback JSON downloaded, explicitly flagged development QA |
+| Optional events | 16 actual QA-only events exported, all marked development_test; summarizer excludes all 16, reports zero non-test sessions and no confirmed-human count |
+| Console | No browser error logs on final fresh verification tab |
+| Privacy cleanup | QA local event records cleared; final visible app has recording off and no stored visits/sessions |
+
+A first online check exposed a stale-results empty-state bug; it was fixed. During publication, edge caches temporarily served previous assets despite the deployment success response. Content-addressed asset paths were added; verification waited for the final build ID and matching bytes. The final build was then exercised again, including actual CSV uploads. This is why deployment status alone was not used as acceptance evidence.
+
+GitHub implementation commit: `a32801a7f1702f92b5307dc78608430985f0713a`. Its [Core integrity checks run](https://github.com/QiZhang1102/co2rr-cross-study_Hackathon/actions/runs/42766459877) completed successfully (tests and static build). Subsequent documentation-only commits record these results; they do not change the deployed runtime.
+
+Browser screenshots are delivered alongside the final response. The local event log and feedback are QA artifacts, not testimonials. No real target-user trial was conducted.
 
 ## Not claimed
 
