@@ -1,0 +1,39 @@
+
+> nextexperiment@1.0.0 test
+> node --test tests/core.test.mjs
+
+✔ Cholesky solves a known linear system (0.592291ms)
+✔ Matérn covariance is one at equal coordinates and symmetric (0.107583ms)
+✔ EI analytical checks and symmetry (0.094167ms)
+✔ Maximization and minimization select opposite useful directions (0.925708ms)
+✔ Negating all objectives and switching direction preserves ranking and SD (1.451125ms)
+✔ Measured coordinates (even with different IDs) and exclusions never recommended (0.133625ms)
+✔ Candidate outcomes are rejected at the recommender boundary (0.240292ms)
+✔ Unrevealed outcome changes cannot affect any recommendation before selection (0.551917ms)
+✔ After selection only the newly revealed value joins training (0.222417ms)
+✔ Seeded policy comparison is reproducible, paired and budget exact (1.003167ms)
+✔ Budget enforced; no active recommendation after completion (0.110959ms)
+✔ Too few samples, bad dimensions, repeated measurements and invalid numbers rejected (0.143541ms)
+✔ No remaining candidates returns an honest empty ranking (0.072708ms)
+✔ Identical target values fit without division by zero (0.084709ms)
+✔ CSV parser handles BOM, CRLF, escaped quotes and quoted newlines (0.384708ms)
+✔ CSV rejects duplicate or missing headers, ragged rows and malformed quotes (0.152917ms)
+✔ CSV import preserves unknown candidate results as absent, never zero (0.588833ms)
+✔ Missing values and nonfinite inputs rejected with row context (0.207958ms)
+✔ Invalid mappings, data origin, and duplicates rejected (0.227291ms)
+✔ Candidate-to-measured overlap auto-excluded by coordinates (0.160292ms)
+✔ Recommendation CSV and report use the exact live ranking, no hidden outcomes (1.514417ms)
+✔ Exports escape HTML and neutralize spreadsheet formula text (0.131875ms)
+✔ Consent-only events contain no uploaded content and never claim users (2.707083ms)
+✔ Storage denial still permits an exportable in-memory record (0.096416ms)
+✔ Public cohorts never mix potential reference scales (0.045708ms)
+✔ Numerical factorization failures are surfaced instead of fabricated estimates (0.059334ms)
+✔ Matching candidate target cannot be silently treated as metadata (0.079083ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 62.676791

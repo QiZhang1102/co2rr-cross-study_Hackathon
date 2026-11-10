@@ -1,0 +1,16 @@
+{
+  "name": "nextexperiment",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first Gaussian process experiment selection with public CO2RR replay",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/core.test.mjs",
+    "check": "npm test && npm run build"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
