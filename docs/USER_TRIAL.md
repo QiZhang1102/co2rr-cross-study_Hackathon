@@ -4,7 +4,7 @@ No participants have been recruited or contacted by the implementation agent. No
 
 ## Invitation text (organizer sends; not sent automatically)
 
-> I am testing NextExperiment, a free browser tool that helps research students choose a next experiment from a finite candidate list. Could you try a 7–10 minute task with public or simulated data and give candid feedback? No registration or API key is needed. Please do not use private lab or patient data. Optional event records stay on your device and can be downloaded and voluntarily shared with me; they contain no experiment tables. You can participate without enabling records. Website: https://next-experiment-co2rr.zq20021102mia.chatgpt.site
+> I am testing NextExperiment, a free browser tool that helps research students choose a next experiment from a finite candidate list. Could you try a 7–10 minute task with public or simulated data and give candid feedback? No registration or API key is needed. Please do not use private lab or patient data. Optional event records stay on your device and can be downloaded and voluntarily shared with me; they contain no experiment tables. You can participate without enabling records. Website: https://qizhang1102.github.io/co2rr-cross-study_Hackathon/
 
 ## Target participants
 

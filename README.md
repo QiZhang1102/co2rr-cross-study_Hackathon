@@ -2,7 +2,7 @@
 
 An uncertainty-aware assistant for a research student's next experiment: fit your measured data, rank a finite list of feasible conditions, reveal or add a result, and repeat.
 
-**Public website:** https://next-experiment-co2rr.zq20021102mia.chatgpt.site
+**Public website:** https://qizhang1102.github.io/co2rr-cross-study_Hackathon/
 
 No registration, GPU, API key, backend, or external language model. CSV parsing, Gaussian process fitting, charts, reports and optional event records run in the browser. Only public or simulated data are permitted in this Hackathon version.
 
@@ -57,7 +57,7 @@ Model SD is uncalibrated model uncertainty, not experimental error or success pr
 Any static HTTPS host can serve `dist/` without server configuration. Assets use relative paths, including GitHub Pages project paths.
 
 - **Sites:** `.openai/hosting.json` records the existing project and static `dist` directory. Reuse that project ID; build, push the matching source to its source repository, save a version and deploy. The intended audience is public. Do not commit source credentials.
-- **GitHub Pages:** the manual `.github/workflows/pages.yml` builds and deploys `dist/`. A repository administrator must select **Settings → Pages → Source: GitHub Actions**, then run **Deploy static site**. This is an optional alternate deployment; do not confuse an expected URL with an actual successful deployment.
+- **GitHub Pages (current public website):** `.github/workflows/pages.yml` builds and deploys `dist/`. **Settings → Pages → Source: GitHub Actions** is enabled. To publish future code changes, open **Actions → Deploy static site → Run workflow**, choose `main`, and run it. Deployment is manual; pushing code alone does not publish a new website. The public URL above passed online interaction checks; see the migration record below.
 - **Other hosts:** build command `npm run build`; publish directory `dist`; no environment variables, paid services or API keys.
 
 See [verification](docs/VERIFICATION.md) for actual deployment and browser checks. User-facing links are only complete once public access and interactive workflows are verified.

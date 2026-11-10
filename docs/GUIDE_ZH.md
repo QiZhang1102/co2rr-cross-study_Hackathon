@@ -1,6 +1,6 @@
 # NextExperiment：使用、演示与提交
 
-公开体验地址：https://next-experiment-co2rr.zq20021102mia.chatgpt.site
+公开体验地址：https://qizhang1102.github.io/co2rr-cross-study_Hackathon/
 
 代码仓库：https://github.com/QiZhang1102/co2rr-cross-study_Hackathon
 
@@ -49,7 +49,7 @@
 
 本地 Node.js 22+：`npm test`，`npm run dev`。不需要安装运行依赖。默认端口 4173；冲突时用 `PORT=4187 npm run dev`。
 
-`npm run build` 生成 dist；任意静态 HTTPS 托管均可部署。当前 Sites 身份保存在 `.openai/hosting.json`。仓库另附 GitHub Pages 手动工作流；若用它，需要在仓库 Settings → Pages 选择 GitHub Actions，再手动运行 Deploy static site。不要付费开资源，不要修改仓库可见性。
+`npm run build` 生成 dist；任意静态 HTTPS 托管均可部署。当前公开网站使用 GitHub Pages，不含 chatgpt 域名，已通过线上流程验证。仓库 Settings → Pages 已启用 GitHub Actions。以后更新网站代码后，进入 **Actions → Deploy static site → Run workflow**，选择 `main` 并运行；单独提交代码不会自动更新网站。旧 Sites 部署信息保留在 `.openai/hosting.json`。不要付费开资源，不要修改仓库可见性。
 
 截止时间按你提供的信息：**2026 年 11 月 14 日中午 12:00，America/Los_Angeles（PST）**。建议 13 日前完成真实试用与反馈，14 日上午锁定版本并提交仓库、视频和真实证据。
 

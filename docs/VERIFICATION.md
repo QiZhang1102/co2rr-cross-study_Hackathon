@@ -20,7 +20,7 @@ Build date: 2026-11-09. Node 24.11.0 on macOS. Browser: Google Chrome via suppor
 
 Browser extension upload API lacked local-file URL access; the native system picker succeeded, without changing extension permissions. The download event API timed out, but the native download and exact downloaded file contents were independently verified. These were automation limitations, not application file-import failures.
 
-## Production verification
+## Original Sites production verification
 
 **Verified public URL:** https://next-experiment-co2rr.zq20021102mia.chatgpt.site
 
@@ -52,6 +52,32 @@ A first online check exposed a stale-results empty-state bug; it was fixed. Duri
 GitHub implementation commit: `a32801a7f1702f92b5307dc78608430985f0713a`. Its [Core integrity checks run](https://github.com/QiZhang1102/co2rr-cross-study_Hackathon/actions/runs/42766459877) completed successfully (tests and static build). Subsequent documentation-only commits record these results; they do not change the deployed runtime.
 
 Browser screenshots are delivered alongside the final response. The local event log and feedback are QA artifacts, not testimonials. No real target-user trial was conducted.
+
+## GitHub Pages migration verification
+
+**Current public URL:** https://qizhang1102.github.io/co2rr-cross-study_Hackathon/
+
+Verified November 9, 2026 (America/Los_Angeles), after enabling GitHub Actions as the Pages source. [Deployment run 42773789461](https://github.com/QiZhang1102/co2rr-cross-study_Hackathon/actions/runs/42773789461) completed successfully from commit `5b7050b80af54c7ca3a940a7fa4d2ed0c2ea537e`. The public app was opened in a separate in-app browser without GitHub login or an API key. The rendered build meta tag was `5451698ce3dc`, matching the existing runtime. No application code changed for this migration. `npm run check` passed all 27 tests and the static build before migration.
+
+The following checks were actually repeated on the GitHub Pages URL, rather than inferred from the previous host:
+
+| Check | Observed outcome |
+| --- | --- |
+| Initial page | Home and replay empty state render without authentication |
+| One-click replay | 3 observations; L06 predicted mean 48.0728 |
+| Reveal and refit | L06 historical result 15.9; count becomes 4 and next recommendation L05 |
+| Budget and comparison | L05=8.3 and L07=22.3 complete budget 6; Random 52.5, GP mean 52.5, GP-EI 44.8 from the same L03/L08/L02 start |
+| Actual CSV upload | Both local example files selected through file chooser; 3 measured / 5 candidates, blank candidate targets retained |
+| Custom recommendation | Simulated source declared, mapping validated; C3 mean 57.3525 |
+| Exclusion | Excluding C3 changes top choice to C2 |
+| Add result | C2=65 produces 4 observations, best 65, updated chart and C4 mean 47.6195 |
+| Real downloads | Recommendation CSV, known-result CSV and HTML report downloaded and inspected; CSV C4 mean 47.61950643107065 matches displayed rounding; measured C2 and excluded C3 are absent from recommendations; known CSV/report contain new result 65 |
+| Desktop | 1440×900; document width 1440; CSV mapping, chart and results present |
+| Mobile | 390×844; document width 390; home and recommendation card visually inspected |
+| Goal on mobile | Switching imported task to minimize gives best 35, C5 recommendation and lower-is-better chart |
+| Final page | Returned to clean homepage; viewport override reset |
+
+Screenshots are supplied as `nextexperiment-github-pages-home.jpg`, `nextexperiment-github-pages-desktop.jpg`, `nextexperiment-github-pages-mobile.jpg` and `nextexperiment-github-pages-mobile-workspace.jpg` in the delivered outputs. This migration QA did not enable trial recording and does not count as an independent real user. The original host's historical verification and integrity record above remain unchanged; they are not mislabeled as checks of GitHub Pages.
 
 ## Not claimed
 
